@@ -16,7 +16,7 @@ package kokkos
 
     # beryllium
     #lattice         hcp 2.267
-    #region          box block 0 1 0 1 0 1
+    #region          box block 0 20 0 20 0 20
     #create_box      1 box
     #create_atoms    1 box
     #mass 1 9.0
@@ -24,14 +24,14 @@ package kokkos
     # aluminum
     lattice         fcc 4.05
 Lattice spacing in x,y,z = 4.05 4.05 4.05
-    region          box block 0 1 0 1 0 1
+    region          box block 0 20 0 20 0 20
     create_box      1 box
-Created orthogonal box = (0 0 0) to (4.05 4.05 4.05)
-  2 by 1 by 2 MPI processor grid
+Created orthogonal box = (0 0 0) to (81 81 81)
+  1 by 2 by 2 MPI processor grid
     create_atoms    1 box
-Created 4 atoms
-  using lattice units in orthogonal box = (0 0 0) to (4.05 4.05 4.05)
-  create_atoms CPU = 0.001 seconds
+Created 32000 atoms
+  using lattice units in orthogonal box = (0 0 0) to (81 81 81)
+  create_atoms CPU = 0.002 seconds
     mass 1 26.98
 
     # Needs to be defined for Kokkos
@@ -40,7 +40,7 @@ Created 4 atoms
     # define grid compute and atom compute
 
     group     snapgroup type 1
-4 atoms in group snapgroup
+32000 atoms in group snapgroup
     variable   rfac0 equal 0.99363
     variable   rmin0 equal 0
     variable   wj equal 1
@@ -67,19 +67,19 @@ Neighbor list info ...
   max neighbors/atom: 2000, page size: 100000
   master list distance cutoff = 7
   ghost atom cutoff = 7
-  binsize = 7, bins = 1 1 1
+  binsize = 7, bins = 12 12 12
   1 neighbor lists, perpetual/occasional/extra = 1 0 0
   (1) pair zero, perpetual
       attributes: half, newton off
       pair build: half/bin/newtoff
       stencil: full/bin/3d
       bin: standard
-Per MPI rank memory allocation (min/avg/max) = 3.899 | 3.899 | 3.899 Mbytes
+Per MPI rank memory allocation (min/avg/max) = 4.814 | 4.814 | 4.814 Mbytes
    Step          Temp          KinEng         PotEng         Volume    
-         0   0              0              0              66.430125    
-Loop time of 0.000174046 on 4 procs for 0 steps with 4 atoms
+         0   0              0              0              531441       
+Loop time of 0.000187963 on 4 procs for 0 steps with 32000 atoms
 
-31.0% CPU use with 4 MPI tasks x 1 OpenMP threads
+29.9% CPU use with 4 MPI tasks x 1 OpenMP threads
 
 MPI task timing breakdown:
 Section |  min time  |  avg time  |  max time  |%varavg| %total
@@ -89,17 +89,17 @@ Neigh   | 0          | 0          | 0          |   0.0 |  0.00
 Comm    | 0          | 0          | 0          |   0.0 |  0.00
 Output  | 0          | 0          | 0          |   0.0 |  0.00
 Modify  | 0          | 0          | 0          |   0.0 |  0.00
-Other   |            | 0.000174   |            |       |100.00
+Other   |            | 0.000188   |            |       |100.00
 
-Nlocal:              1 ave           1 max           1 min
+Nlocal:           8000 ave        8000 max        8000 min
 Histogram: 4 0 0 0 0 0 0 0 0 0
-Nghost:            287 ave         287 max         287 min
+Nghost:           9131 ave        9131 max        9131 min
 Histogram: 4 0 0 0 0 0 0 0 0 0
-Neighs:             78 ave          78 max          78 min
+Neighs:         356332 ave      356332 max      356332 min
 Histogram: 4 0 0 0 0 0 0 0 0 0
 
-Total # of neighbors = 312
-Ave neighs/atom = 78
+Total # of neighbors = 1425328
+Ave neighs/atom = 44.5415
 Neighbor list builds = 0
 Dangerous builds = 0
     
@@ -118,7 +118,7 @@ package kokkos
 
     # beryllium
     #lattice         hcp 2.267
-    #region          box block 0 1 0 1 0 1
+    #region          box block 0 20 0 20 0 20
     #create_box      1 box
     #create_atoms    1 box
     #mass 1 9.0
@@ -126,14 +126,14 @@ package kokkos
     # aluminum
     lattice         fcc 4.05
 Lattice spacing in x,y,z = 4.05 4.05 4.05
-    region          box block 0 1 0 1 0 1
+    region          box block 0 20 0 20 0 20
     create_box      1 box
-Created orthogonal box = (0 0 0) to (4.05 4.05 4.05)
-  2 by 1 by 2 MPI processor grid
+Created orthogonal box = (0 0 0) to (81 81 81)
+  1 by 2 by 2 MPI processor grid
     create_atoms    1 box
-Created 4 atoms
-  using lattice units in orthogonal box = (0 0 0) to (4.05 4.05 4.05)
-  create_atoms CPU = 0.001 seconds
+Created 32000 atoms
+  using lattice units in orthogonal box = (0 0 0) to (81 81 81)
+  create_atoms CPU = 0.002 seconds
     mass 1 26.98
 
     # Needs to be defined for Kokkos
@@ -142,7 +142,7 @@ Created 4 atoms
     # define grid compute and atom compute
 
     group     snapgroup type 1
-4 atoms in group snapgroup
+32000 atoms in group snapgroup
     variable   rfac0 equal 0.99363
     variable   rmin0 equal 0
     variable   wj equal 1
@@ -169,19 +169,19 @@ Neighbor list info ...
   max neighbors/atom: 2000, page size: 100000
   master list distance cutoff = 7
   ghost atom cutoff = 7
-  binsize = 7, bins = 1 1 1
+  binsize = 7, bins = 12 12 12
   1 neighbor lists, perpetual/occasional/extra = 1 0 0
   (1) pair zero, perpetual
       attributes: half, newton off
       pair build: half/bin/newtoff
       stencil: full/bin/3d
       bin: standard
-Per MPI rank memory allocation (min/avg/max) = 3.899 | 3.899 | 3.899 Mbytes
+Per MPI rank memory allocation (min/avg/max) = 4.814 | 4.814 | 4.814 Mbytes
    Step          Temp          KinEng         PotEng         Volume    
-         0   0              0              0              66.430125    
-Loop time of 0.000161287 on 4 procs for 0 steps with 4 atoms
+         0   0              0              0              531441       
+Loop time of 0.00019181 on 4 procs for 0 steps with 32000 atoms
 
-31.3% CPU use with 4 MPI tasks x 1 OpenMP threads
+31.2% CPU use with 4 MPI tasks x 1 OpenMP threads
 
 MPI task timing breakdown:
 Section |  min time  |  avg time  |  max time  |%varavg| %total
@@ -191,17 +191,17 @@ Neigh   | 0          | 0          | 0          |   0.0 |  0.00
 Comm    | 0          | 0          | 0          |   0.0 |  0.00
 Output  | 0          | 0          | 0          |   0.0 |  0.00
 Modify  | 0          | 0          | 0          |   0.0 |  0.00
-Other   |            | 0.0001613  |            |       |100.00
+Other   |            | 0.0001918  |            |       |100.00
 
-Nlocal:              1 ave           1 max           1 min
+Nlocal:           8000 ave        8000 max        8000 min
 Histogram: 4 0 0 0 0 0 0 0 0 0
-Nghost:            287 ave         287 max         287 min
+Nghost:           9131 ave        9131 max        9131 min
 Histogram: 4 0 0 0 0 0 0 0 0 0
-Neighs:             78 ave          78 max          78 min
+Neighs:         356332 ave      356332 max      356332 min
 Histogram: 4 0 0 0 0 0 0 0 0 0
 
-Total # of neighbors = 312
-Ave neighs/atom = 78
+Total # of neighbors = 1425328
+Ave neighs/atom = 44.5415
 Neighbor list builds = 0
 Dangerous builds = 0
     
@@ -220,7 +220,7 @@ package kokkos
 
     # beryllium
     #lattice         hcp 2.267
-    #region          box block 0 1 0 1 0 1
+    #region          box block 0 20 0 20 0 20
     #create_box      1 box
     #create_atoms    1 box
     #mass 1 9.0
@@ -228,14 +228,14 @@ package kokkos
     # aluminum
     lattice         fcc 4.05
 Lattice spacing in x,y,z = 4.05 4.05 4.05
-    region          box block 0 1 0 1 0 1
+    region          box block 0 20 0 20 0 20
     create_box      1 box
-Created orthogonal box = (0 0 0) to (4.05 4.05 4.05)
-  2 by 1 by 2 MPI processor grid
+Created orthogonal box = (0 0 0) to (81 81 81)
+  1 by 2 by 2 MPI processor grid
     create_atoms    1 box
-Created 4 atoms
-  using lattice units in orthogonal box = (0 0 0) to (4.05 4.05 4.05)
-  create_atoms CPU = 0.001 seconds
+Created 32000 atoms
+  using lattice units in orthogonal box = (0 0 0) to (81 81 81)
+  create_atoms CPU = 0.002 seconds
     mass 1 26.98
 
     # Needs to be defined for Kokkos
@@ -244,7 +244,7 @@ Created 4 atoms
     # define grid compute and atom compute
 
     group     snapgroup type 1
-4 atoms in group snapgroup
+32000 atoms in group snapgroup
     variable   rfac0 equal 0.99363
     variable   rmin0 equal 0
     variable   wj equal 1
@@ -271,19 +271,19 @@ Neighbor list info ...
   max neighbors/atom: 2000, page size: 100000
   master list distance cutoff = 7
   ghost atom cutoff = 7
-  binsize = 7, bins = 1 1 1
+  binsize = 7, bins = 12 12 12
   1 neighbor lists, perpetual/occasional/extra = 1 0 0
   (1) pair zero, perpetual
       attributes: half, newton off
       pair build: half/bin/newtoff
       stencil: full/bin/3d
       bin: standard
-Per MPI rank memory allocation (min/avg/max) = 3.899 | 3.899 | 3.899 Mbytes
+Per MPI rank memory allocation (min/avg/max) = 4.814 | 4.814 | 4.814 Mbytes
    Step          Temp          KinEng         PotEng         Volume    
-         0   0              0              0              66.430125    
-Loop time of 0.000182827 on 4 procs for 0 steps with 4 atoms
+         0   0              0              0              531441       
+Loop time of 0.000187993 on 4 procs for 0 steps with 32000 atoms
 
-34.9% CPU use with 4 MPI tasks x 1 OpenMP threads
+32.4% CPU use with 4 MPI tasks x 1 OpenMP threads
 
 MPI task timing breakdown:
 Section |  min time  |  avg time  |  max time  |%varavg| %total
@@ -293,17 +293,17 @@ Neigh   | 0          | 0          | 0          |   0.0 |  0.00
 Comm    | 0          | 0          | 0          |   0.0 |  0.00
 Output  | 0          | 0          | 0          |   0.0 |  0.00
 Modify  | 0          | 0          | 0          |   0.0 |  0.00
-Other   |            | 0.0001828  |            |       |100.00
+Other   |            | 0.000188   |            |       |100.00
 
-Nlocal:              1 ave           1 max           1 min
+Nlocal:           8000 ave        8000 max        8000 min
 Histogram: 4 0 0 0 0 0 0 0 0 0
-Nghost:            287 ave         287 max         287 min
+Nghost:           9131 ave        9131 max        9131 min
 Histogram: 4 0 0 0 0 0 0 0 0 0
-Neighs:             78 ave          78 max          78 min
+Neighs:         356332 ave      356332 max      356332 min
 Histogram: 4 0 0 0 0 0 0 0 0 0
 
-Total # of neighbors = 312
-Ave neighs/atom = 78
+Total # of neighbors = 1425328
+Ave neighs/atom = 44.5415
 Neighbor list builds = 0
 Dangerous builds = 0
     
@@ -322,7 +322,7 @@ package kokkos
 
     # beryllium
     #lattice         hcp 2.267
-    #region          box block 0 1 0 1 0 1
+    #region          box block 0 20 0 20 0 20
     #create_box      1 box
     #create_atoms    1 box
     #mass 1 9.0
@@ -330,14 +330,14 @@ package kokkos
     # aluminum
     lattice         fcc 4.05
 Lattice spacing in x,y,z = 4.05 4.05 4.05
-    region          box block 0 1 0 1 0 1
+    region          box block 0 20 0 20 0 20
     create_box      1 box
-Created orthogonal box = (0 0 0) to (4.05 4.05 4.05)
-  2 by 1 by 2 MPI processor grid
+Created orthogonal box = (0 0 0) to (81 81 81)
+  1 by 2 by 2 MPI processor grid
     create_atoms    1 box
-Created 4 atoms
-  using lattice units in orthogonal box = (0 0 0) to (4.05 4.05 4.05)
-  create_atoms CPU = 0.001 seconds
+Created 32000 atoms
+  using lattice units in orthogonal box = (0 0 0) to (81 81 81)
+  create_atoms CPU = 0.002 seconds
     mass 1 26.98
 
     # Needs to be defined for Kokkos
@@ -346,7 +346,7 @@ Created 4 atoms
     # define grid compute and atom compute
 
     group     snapgroup type 1
-4 atoms in group snapgroup
+32000 atoms in group snapgroup
     variable   rfac0 equal 0.99363
     variable   rmin0 equal 0
     variable   wj equal 1
@@ -373,19 +373,19 @@ Neighbor list info ...
   max neighbors/atom: 2000, page size: 100000
   master list distance cutoff = 7
   ghost atom cutoff = 7
-  binsize = 7, bins = 1 1 1
+  binsize = 7, bins = 12 12 12
   1 neighbor lists, perpetual/occasional/extra = 1 0 0
   (1) pair zero, perpetual
       attributes: half, newton off
       pair build: half/bin/newtoff
       stencil: full/bin/3d
       bin: standard
-Per MPI rank memory allocation (min/avg/max) = 3.899 | 3.899 | 3.899 Mbytes
+Per MPI rank memory allocation (min/avg/max) = 4.814 | 4.814 | 4.814 Mbytes
    Step          Temp          KinEng         PotEng         Volume    
-         0   0              0              0              66.430125    
-Loop time of 0.00018255 on 4 procs for 0 steps with 4 atoms
+         0   0              0              0              531441       
+Loop time of 0.000170544 on 4 procs for 0 steps with 32000 atoms
 
-35.5% CPU use with 4 MPI tasks x 1 OpenMP threads
+50.3% CPU use with 4 MPI tasks x 1 OpenMP threads
 
 MPI task timing breakdown:
 Section |  min time  |  avg time  |  max time  |%varavg| %total
@@ -395,17 +395,17 @@ Neigh   | 0          | 0          | 0          |   0.0 |  0.00
 Comm    | 0          | 0          | 0          |   0.0 |  0.00
 Output  | 0          | 0          | 0          |   0.0 |  0.00
 Modify  | 0          | 0          | 0          |   0.0 |  0.00
-Other   |            | 0.0001825  |            |       |100.00
+Other   |            | 0.0001705  |            |       |100.00
 
-Nlocal:              1 ave           1 max           1 min
+Nlocal:           8000 ave        8000 max        8000 min
 Histogram: 4 0 0 0 0 0 0 0 0 0
-Nghost:            287 ave         287 max         287 min
+Nghost:           9131 ave        9131 max        9131 min
 Histogram: 4 0 0 0 0 0 0 0 0 0
-Neighs:             78 ave          78 max          78 min
+Neighs:         356332 ave      356332 max      356332 min
 Histogram: 4 0 0 0 0 0 0 0 0 0
 
-Total # of neighbors = 312
-Ave neighs/atom = 78
+Total # of neighbors = 1425328
+Ave neighs/atom = 44.5415
 Neighbor list builds = 0
 Dangerous builds = 0
     
@@ -424,7 +424,7 @@ package kokkos
 
     # beryllium
     #lattice         hcp 2.267
-    #region          box block 0 1 0 1 0 1
+    #region          box block 0 20 0 20 0 20
     #create_box      1 box
     #create_atoms    1 box
     #mass 1 9.0
@@ -432,13 +432,13 @@ package kokkos
     # aluminum
     lattice         fcc 4.05
 Lattice spacing in x,y,z = 4.05 4.05 4.05
-    region          box block 0 1 0 1 0 1
+    region          box block 0 20 0 20 0 20
     create_box      1 box
-Created orthogonal box = (0 0 0) to (4.05 4.05 4.05)
-  2 by 1 by 2 MPI processor grid
+Created orthogonal box = (0 0 0) to (81 81 81)
+  1 by 2 by 2 MPI processor grid
     create_atoms    1 box
-Created 4 atoms
-  using lattice units in orthogonal box = (0 0 0) to (4.05 4.05 4.05)
+Created 32000 atoms
+  using lattice units in orthogonal box = (0 0 0) to (81 81 81)
   create_atoms CPU = 0.002 seconds
     mass 1 26.98
 
@@ -448,7 +448,7 @@ Created 4 atoms
     # define grid compute and atom compute
 
     group     snapgroup type 1
-4 atoms in group snapgroup
+32000 atoms in group snapgroup
     variable   rfac0 equal 0.99363
     variable   rmin0 equal 0
     variable   wj equal 1
@@ -475,19 +475,19 @@ Neighbor list info ...
   max neighbors/atom: 2000, page size: 100000
   master list distance cutoff = 7
   ghost atom cutoff = 7
-  binsize = 7, bins = 1 1 1
+  binsize = 7, bins = 12 12 12
   1 neighbor lists, perpetual/occasional/extra = 1 0 0
   (1) pair zero, perpetual
       attributes: half, newton off
       pair build: half/bin/newtoff
       stencil: full/bin/3d
       bin: standard
-Per MPI rank memory allocation (min/avg/max) = 3.899 | 3.899 | 3.899 Mbytes
+Per MPI rank memory allocation (min/avg/max) = 4.814 | 4.814 | 4.814 Mbytes
    Step          Temp          KinEng         PotEng         Volume    
-         0   0              0              0              66.430125    
-Loop time of 0.000183073 on 4 procs for 0 steps with 4 atoms
+         0   0              0              0              531441       
+Loop time of 0.00017465 on 4 procs for 0 steps with 32000 atoms
 
-36.2% CPU use with 4 MPI tasks x 1 OpenMP threads
+36.8% CPU use with 4 MPI tasks x 1 OpenMP threads
 
 MPI task timing breakdown:
 Section |  min time  |  avg time  |  max time  |%varavg| %total
@@ -497,17 +497,17 @@ Neigh   | 0          | 0          | 0          |   0.0 |  0.00
 Comm    | 0          | 0          | 0          |   0.0 |  0.00
 Output  | 0          | 0          | 0          |   0.0 |  0.00
 Modify  | 0          | 0          | 0          |   0.0 |  0.00
-Other   |            | 0.0001831  |            |       |100.00
+Other   |            | 0.0001746  |            |       |100.00
 
-Nlocal:              1 ave           1 max           1 min
+Nlocal:           8000 ave        8000 max        8000 min
 Histogram: 4 0 0 0 0 0 0 0 0 0
-Nghost:            287 ave         287 max         287 min
+Nghost:           9131 ave        9131 max        9131 min
 Histogram: 4 0 0 0 0 0 0 0 0 0
-Neighs:             78 ave          78 max          78 min
+Neighs:         356332 ave      356332 max      356332 min
 Histogram: 4 0 0 0 0 0 0 0 0 0
 
-Total # of neighbors = 312
-Ave neighs/atom = 78
+Total # of neighbors = 1425328
+Ave neighs/atom = 44.5415
 Neighbor list builds = 0
 Dangerous builds = 0
     
@@ -526,7 +526,7 @@ package kokkos
 
     # beryllium
     #lattice         hcp 2.267
-    #region          box block 0 1 0 1 0 1
+    #region          box block 0 20 0 20 0 20
     #create_box      1 box
     #create_atoms    1 box
     #mass 1 9.0
@@ -534,14 +534,14 @@ package kokkos
     # aluminum
     lattice         fcc 4.05
 Lattice spacing in x,y,z = 4.05 4.05 4.05
-    region          box block 0 1 0 1 0 1
+    region          box block 0 20 0 20 0 20
     create_box      1 box
-Created orthogonal box = (0 0 0) to (4.05 4.05 4.05)
-  2 by 1 by 2 MPI processor grid
+Created orthogonal box = (0 0 0) to (81 81 81)
+  1 by 2 by 2 MPI processor grid
     create_atoms    1 box
-Created 4 atoms
-  using lattice units in orthogonal box = (0 0 0) to (4.05 4.05 4.05)
-  create_atoms CPU = 0.001 seconds
+Created 32000 atoms
+  using lattice units in orthogonal box = (0 0 0) to (81 81 81)
+  create_atoms CPU = 0.002 seconds
     mass 1 26.98
 
     # Needs to be defined for Kokkos
@@ -550,7 +550,7 @@ Created 4 atoms
     # define grid compute and atom compute
 
     group     snapgroup type 1
-4 atoms in group snapgroup
+32000 atoms in group snapgroup
     variable   rfac0 equal 0.99363
     variable   rmin0 equal 0
     variable   wj equal 1
@@ -577,19 +577,19 @@ Neighbor list info ...
   max neighbors/atom: 2000, page size: 100000
   master list distance cutoff = 7
   ghost atom cutoff = 7
-  binsize = 7, bins = 1 1 1
+  binsize = 7, bins = 12 12 12
   1 neighbor lists, perpetual/occasional/extra = 1 0 0
   (1) pair zero, perpetual
       attributes: half, newton off
       pair build: half/bin/newtoff
       stencil: full/bin/3d
       bin: standard
-Per MPI rank memory allocation (min/avg/max) = 3.899 | 3.899 | 3.899 Mbytes
+Per MPI rank memory allocation (min/avg/max) = 4.814 | 4.814 | 4.814 Mbytes
    Step          Temp          KinEng         PotEng         Volume    
-         0   0              0              0              66.430125    
-Loop time of 0.000197736 on 4 procs for 0 steps with 4 atoms
+         0   0              0              0              531441       
+Loop time of 0.000176728 on 4 procs for 0 steps with 32000 atoms
 
-53.1% CPU use with 4 MPI tasks x 1 OpenMP threads
+41.4% CPU use with 4 MPI tasks x 1 OpenMP threads
 
 MPI task timing breakdown:
 Section |  min time  |  avg time  |  max time  |%varavg| %total
@@ -599,17 +599,17 @@ Neigh   | 0          | 0          | 0          |   0.0 |  0.00
 Comm    | 0          | 0          | 0          |   0.0 |  0.00
 Output  | 0          | 0          | 0          |   0.0 |  0.00
 Modify  | 0          | 0          | 0          |   0.0 |  0.00
-Other   |            | 0.0001977  |            |       |100.00
+Other   |            | 0.0001767  |            |       |100.00
 
-Nlocal:              1 ave           1 max           1 min
+Nlocal:           8000 ave        8000 max        8000 min
 Histogram: 4 0 0 0 0 0 0 0 0 0
-Nghost:            287 ave         287 max         287 min
+Nghost:           9131 ave        9131 max        9131 min
 Histogram: 4 0 0 0 0 0 0 0 0 0
-Neighs:             78 ave          78 max          78 min
+Neighs:         356332 ave      356332 max      356332 min
 Histogram: 4 0 0 0 0 0 0 0 0 0
 
-Total # of neighbors = 312
-Ave neighs/atom = 78
+Total # of neighbors = 1425328
+Ave neighs/atom = 44.5415
 Neighbor list builds = 0
 Dangerous builds = 0
     
@@ -628,7 +628,7 @@ package kokkos
 
     # beryllium
     #lattice         hcp 2.267
-    #region          box block 0 1 0 1 0 1
+    #region          box block 0 20 0 20 0 20
     #create_box      1 box
     #create_atoms    1 box
     #mass 1 9.0
@@ -636,14 +636,14 @@ package kokkos
     # aluminum
     lattice         fcc 4.05
 Lattice spacing in x,y,z = 4.05 4.05 4.05
-    region          box block 0 1 0 1 0 1
+    region          box block 0 20 0 20 0 20
     create_box      1 box
-Created orthogonal box = (0 0 0) to (4.05 4.05 4.05)
-  2 by 1 by 2 MPI processor grid
+Created orthogonal box = (0 0 0) to (81 81 81)
+  1 by 2 by 2 MPI processor grid
     create_atoms    1 box
-Created 4 atoms
-  using lattice units in orthogonal box = (0 0 0) to (4.05 4.05 4.05)
-  create_atoms CPU = 0.001 seconds
+Created 32000 atoms
+  using lattice units in orthogonal box = (0 0 0) to (81 81 81)
+  create_atoms CPU = 0.002 seconds
     mass 1 26.98
 
     # Needs to be defined for Kokkos
@@ -652,7 +652,7 @@ Created 4 atoms
     # define grid compute and atom compute
 
     group     snapgroup type 1
-4 atoms in group snapgroup
+32000 atoms in group snapgroup
     variable   rfac0 equal 0.99363
     variable   rmin0 equal 0
     variable   wj equal 1
@@ -679,19 +679,19 @@ Neighbor list info ...
   max neighbors/atom: 2000, page size: 100000
   master list distance cutoff = 7
   ghost atom cutoff = 7
-  binsize = 7, bins = 1 1 1
+  binsize = 7, bins = 12 12 12
   1 neighbor lists, perpetual/occasional/extra = 1 0 0
   (1) pair zero, perpetual
       attributes: half, newton off
       pair build: half/bin/newtoff
       stencil: full/bin/3d
       bin: standard
-Per MPI rank memory allocation (min/avg/max) = 3.899 | 3.899 | 3.899 Mbytes
+Per MPI rank memory allocation (min/avg/max) = 4.814 | 4.814 | 4.814 Mbytes
    Step          Temp          KinEng         PotEng         Volume    
-         0   0              0              0              66.430125    
-Loop time of 0.000195978 on 4 procs for 0 steps with 4 atoms
+         0   0              0              0              531441       
+Loop time of 0.000189556 on 4 procs for 0 steps with 32000 atoms
 
-40.8% CPU use with 4 MPI tasks x 1 OpenMP threads
+61.1% CPU use with 4 MPI tasks x 1 OpenMP threads
 
 MPI task timing breakdown:
 Section |  min time  |  avg time  |  max time  |%varavg| %total
@@ -701,17 +701,17 @@ Neigh   | 0          | 0          | 0          |   0.0 |  0.00
 Comm    | 0          | 0          | 0          |   0.0 |  0.00
 Output  | 0          | 0          | 0          |   0.0 |  0.00
 Modify  | 0          | 0          | 0          |   0.0 |  0.00
-Other   |            | 0.000196   |            |       |100.00
+Other   |            | 0.0001896  |            |       |100.00
 
-Nlocal:              1 ave           1 max           1 min
+Nlocal:           8000 ave        8000 max        8000 min
 Histogram: 4 0 0 0 0 0 0 0 0 0
-Nghost:            287 ave         287 max         287 min
+Nghost:           9131 ave        9131 max        9131 min
 Histogram: 4 0 0 0 0 0 0 0 0 0
-Neighs:             78 ave          78 max          78 min
+Neighs:         356332 ave      356332 max      356332 min
 Histogram: 4 0 0 0 0 0 0 0 0 0
 
-Total # of neighbors = 312
-Ave neighs/atom = 78
+Total # of neighbors = 1425328
+Ave neighs/atom = 44.5415
 Neighbor list builds = 0
 Dangerous builds = 0
     
@@ -730,7 +730,7 @@ package kokkos
 
     # beryllium
     #lattice         hcp 2.267
-    #region          box block 0 1 0 1 0 1
+    #region          box block 0 20 0 20 0 20
     #create_box      1 box
     #create_atoms    1 box
     #mass 1 9.0
@@ -738,14 +738,14 @@ package kokkos
     # aluminum
     lattice         fcc 4.05
 Lattice spacing in x,y,z = 4.05 4.05 4.05
-    region          box block 0 1 0 1 0 1
+    region          box block 0 20 0 20 0 20
     create_box      1 box
-Created orthogonal box = (0 0 0) to (4.05 4.05 4.05)
-  2 by 1 by 2 MPI processor grid
+Created orthogonal box = (0 0 0) to (81 81 81)
+  1 by 2 by 2 MPI processor grid
     create_atoms    1 box
-Created 4 atoms
-  using lattice units in orthogonal box = (0 0 0) to (4.05 4.05 4.05)
-  create_atoms CPU = 0.001 seconds
+Created 32000 atoms
+  using lattice units in orthogonal box = (0 0 0) to (81 81 81)
+  create_atoms CPU = 0.004 seconds
     mass 1 26.98
 
     # Needs to be defined for Kokkos
@@ -754,7 +754,7 @@ Created 4 atoms
     # define grid compute and atom compute
 
     group     snapgroup type 1
-4 atoms in group snapgroup
+32000 atoms in group snapgroup
     variable   rfac0 equal 0.99363
     variable   rmin0 equal 0
     variable   wj equal 1
@@ -781,19 +781,19 @@ Neighbor list info ...
   max neighbors/atom: 2000, page size: 100000
   master list distance cutoff = 7
   ghost atom cutoff = 7
-  binsize = 7, bins = 1 1 1
+  binsize = 7, bins = 12 12 12
   1 neighbor lists, perpetual/occasional/extra = 1 0 0
   (1) pair zero, perpetual
       attributes: half, newton off
       pair build: half/bin/newtoff
       stencil: full/bin/3d
       bin: standard
-Per MPI rank memory allocation (min/avg/max) = 3.899 | 3.899 | 3.899 Mbytes
+Per MPI rank memory allocation (min/avg/max) = 4.814 | 4.814 | 4.814 Mbytes
    Step          Temp          KinEng         PotEng         Volume    
-         0   0              0              0              66.430125    
-Loop time of 0.00021783 on 4 procs for 0 steps with 4 atoms
+         0   0              0              0              531441       
+Loop time of 0.000228383 on 4 procs for 0 steps with 32000 atoms
 
-41.4% CPU use with 4 MPI tasks x 1 OpenMP threads
+56.9% CPU use with 4 MPI tasks x 1 OpenMP threads
 
 MPI task timing breakdown:
 Section |  min time  |  avg time  |  max time  |%varavg| %total
@@ -803,17 +803,17 @@ Neigh   | 0          | 0          | 0          |   0.0 |  0.00
 Comm    | 0          | 0          | 0          |   0.0 |  0.00
 Output  | 0          | 0          | 0          |   0.0 |  0.00
 Modify  | 0          | 0          | 0          |   0.0 |  0.00
-Other   |            | 0.0002178  |            |       |100.00
+Other   |            | 0.0002284  |            |       |100.00
 
-Nlocal:              1 ave           1 max           1 min
+Nlocal:           8000 ave        8000 max        8000 min
 Histogram: 4 0 0 0 0 0 0 0 0 0
-Nghost:            287 ave         287 max         287 min
+Nghost:           9131 ave        9131 max        9131 min
 Histogram: 4 0 0 0 0 0 0 0 0 0
-Neighs:             78 ave          78 max          78 min
+Neighs:         356332 ave      356332 max      356332 min
 Histogram: 4 0 0 0 0 0 0 0 0 0
 
-Total # of neighbors = 312
-Ave neighs/atom = 78
+Total # of neighbors = 1425328
+Ave neighs/atom = 44.5415
 Neighbor list builds = 0
 Dangerous builds = 0
     
@@ -832,7 +832,7 @@ package kokkos
 
     # beryllium
     #lattice         hcp 2.267
-    #region          box block 0 1 0 1 0 1
+    #region          box block 0 20 0 20 0 20
     #create_box      1 box
     #create_atoms    1 box
     #mass 1 9.0
@@ -840,14 +840,14 @@ package kokkos
     # aluminum
     lattice         fcc 4.05
 Lattice spacing in x,y,z = 4.05 4.05 4.05
-    region          box block 0 1 0 1 0 1
+    region          box block 0 20 0 20 0 20
     create_box      1 box
-Created orthogonal box = (0 0 0) to (4.05 4.05 4.05)
-  2 by 1 by 2 MPI processor grid
+Created orthogonal box = (0 0 0) to (81 81 81)
+  1 by 2 by 2 MPI processor grid
     create_atoms    1 box
-Created 4 atoms
-  using lattice units in orthogonal box = (0 0 0) to (4.05 4.05 4.05)
-  create_atoms CPU = 0.001 seconds
+Created 32000 atoms
+  using lattice units in orthogonal box = (0 0 0) to (81 81 81)
+  create_atoms CPU = 0.002 seconds
     mass 1 26.98
 
     # Needs to be defined for Kokkos
@@ -856,7 +856,7 @@ Created 4 atoms
     # define grid compute and atom compute
 
     group     snapgroup type 1
-4 atoms in group snapgroup
+32000 atoms in group snapgroup
     variable   rfac0 equal 0.99363
     variable   rmin0 equal 0
     variable   wj equal 1
@@ -883,19 +883,19 @@ Neighbor list info ...
   max neighbors/atom: 2000, page size: 100000
   master list distance cutoff = 7
   ghost atom cutoff = 7
-  binsize = 7, bins = 1 1 1
+  binsize = 7, bins = 12 12 12
   1 neighbor lists, perpetual/occasional/extra = 1 0 0
   (1) pair zero, perpetual
       attributes: half, newton off
       pair build: half/bin/newtoff
       stencil: full/bin/3d
       bin: standard
-Per MPI rank memory allocation (min/avg/max) = 3.899 | 3.899 | 3.899 Mbytes
+Per MPI rank memory allocation (min/avg/max) = 4.814 | 4.814 | 4.814 Mbytes
    Step          Temp          KinEng         PotEng         Volume    
-         0   0              0              0              66.430125    
-Loop time of 0.000222281 on 4 procs for 0 steps with 4 atoms
+         0   0              0              0              531441       
+Loop time of 0.00022528 on 4 procs for 0 steps with 32000 atoms
 
-46.5% CPU use with 4 MPI tasks x 1 OpenMP threads
+88.4% CPU use with 4 MPI tasks x 1 OpenMP threads
 
 MPI task timing breakdown:
 Section |  min time  |  avg time  |  max time  |%varavg| %total
@@ -905,21 +905,21 @@ Neigh   | 0          | 0          | 0          |   0.0 |  0.00
 Comm    | 0          | 0          | 0          |   0.0 |  0.00
 Output  | 0          | 0          | 0          |   0.0 |  0.00
 Modify  | 0          | 0          | 0          |   0.0 |  0.00
-Other   |            | 0.0002223  |            |       |100.00
+Other   |            | 0.0002253  |            |       |100.00
 
-Nlocal:              1 ave           1 max           1 min
+Nlocal:           8000 ave        8000 max        8000 min
 Histogram: 4 0 0 0 0 0 0 0 0 0
-Nghost:            287 ave         287 max         287 min
+Nghost:           9131 ave        9131 max        9131 min
 Histogram: 4 0 0 0 0 0 0 0 0 0
-Neighs:             78 ave          78 max          78 min
+Neighs:         356332 ave      356332 max      356332 min
 Histogram: 4 0 0 0 0 0 0 0 0 0
 
-Total # of neighbors = 312
-Ave neighs/atom = 78
+Total # of neighbors = 1425328
+Ave neighs/atom = 44.5415
 Neighbor list builds = 0
 Dangerous builds = 0
     
 clear
   using 1 OpenMP thread(s) per MPI task
 package kokkos
-Total wall time: 0:00:04
+Total wall time: 0:01:00
